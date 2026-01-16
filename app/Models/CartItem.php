@@ -1,0 +1,24 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model; // Use the standard Model
+
+
+
+class CartItem extends Model
+{
+    protected $fillable = [
+        'cart_id',
+        'product_id',
+        'qty',
+        'price_at_time'
+    ];
+
+    public function product()
+    {
+        return $this->belongsTo(Product::class);
+    }
+}
+
+

@@ -25,14 +25,14 @@ class ProductController extends Controller
                     ->editColumn('is_active', function ($product) {
                         $checked = $product->is_active ? 'checked' : '';
                         return '<div class="d-flex justify-content-center align-items-center">
-                <div class="form-check form-switch mb-0">
-                    <input class="form-check-input status-toggle big-switch" 
-                           type="checkbox" 
-                           data-token="' . $product->token . '" 
-                           ' . $checked . ' 
-                           style="width: 45px; height: 22px; cursor: pointer;">
-                </div>
-            </div>';
+                                    <div class="form-check form-switch mb-0">
+                                        <input class="form-check-input status-toggle big-switch" 
+                                            type="checkbox" 
+                                            data-token="' . $product->token . '" 
+                                            ' . $checked . ' 
+                                            style="width: 45px; height: 22px; cursor: pointer;">
+                                    </div>
+                                </div>';
                     })
                     ->addColumn('action', function ($productList) {
 
@@ -107,7 +107,6 @@ class ProductController extends Controller
     public function updateProductStatus(Request $request)
     {
         try {
-            // Validate the request
             $request->validate([
                 'token' => 'required|exists:products,token',
                 'is_active' => 'required|boolean'
