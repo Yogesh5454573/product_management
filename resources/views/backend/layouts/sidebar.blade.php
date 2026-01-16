@@ -24,9 +24,9 @@
                 <div data-i18n="Manage Admins">Manage Admins</div>
             </a>
         </li>
-        <li class="menu-item {{ request()->routeIs('admin.productList', 'admin.addAdmin', 'admin.editAdmin') ? 'active' : '' }}">
+        <li class="menu-item {{ request()->routeIs('admin.productList', 'admin.addProduct', 'admin.editProduct') ? 'active' : '' }}">
             <a href="{{ route('admin.productList') }}" class="menu-link">
-                <i class="menu-icon tf-icons ti ti-user"></i>
+                <i class="menu-icon tf-icons ti ti-files"></i>
                 <div data-i18n="Manage Products">Manage Products</div>
             </a>
         </li>

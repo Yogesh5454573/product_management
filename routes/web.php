@@ -42,6 +42,7 @@ Route::group(['prefix' => 'admin'], function () {
                 Route::post('/addUpdateProduct/{token?}',  'addUpdateProduct')->name('addUpdateProduct');
                 Route::put('/addUpdateProduct/{token?}',  'addUpdateProduct')->name('addUpdateProduct');
                 Route::delete('/deleteProduct/{token}',  'deleteProduct')->name('deleteProduct');
+                Route::post('/updateProductStatus',  'updateProductStatus')->name('updateProductStatus');
             });
         // ========= End Manage Products =========
 
