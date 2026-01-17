@@ -1,0 +1,314 @@
+{
+  "info": {
+    "_postman_id": "22f2c88e-1e00-4b96-b922-9a56d658af56",
+    "name": "Product Management",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "User Register",
+      "id": "dd4c6e59-ce98-465e-9ca2-18b4dc07ed6b",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"John Doe\",\r\n  \"email\": \"john3@test.com\",\r\n  \"password\": \"password123\",\r\n  \"password_confirmation\": \"password123\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://product_management.in/api/register",
+          "protocol": "http",
+          "host": [
+            "product_management",
+            "in"
+          ],
+          "path": [
+            "api",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Login",
+      "id": "b277e626-7871-4d2f-ad53-8f7831314f9e",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "        \"token\": \"4|iqduJIx4VZvpinwhqdd440lDPmzeoBnDFp8C6yaE0f7c21d8\",",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"john@test.com\",\r\n  \"password\": \"password123\"\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://product_management.in/api/login",
+          "protocol": "http",
+          "host": [
+            "product_management",
+            "in"
+          ],
+          "path": [
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "User Logout",
+      "id": "cccb2fd2-3201-496a-89ef-4c5002bdc580",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"john@test.com\",\r\n  \"password\": \"password123\"\r\n}\r\n"
+        },
+        "url": {
+          "raw": "http://product_management.in/api/logout",
+          "protocol": "http",
+          "host": [
+            "product_management",
+            "in"
+          ],
+          "path": [
+            "api",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Carts",
+      "id": "7a6da49d-1599-4f3d-89e0-3473dac87ce6",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "11|2Tb8VlldyZbzaQuFyQrcReuoIlaphOTxUSqImK5S13ef7235",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"product_id\": 18,\r\n  \"qty\": 2\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://product_management.in/api/cart/items",
+          "protocol": "http",
+          "host": [
+            "product_management",
+            "in"
+          ],
+          "path": [
+            "api",
+            "cart",
+            "items"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "auth-check",
+      "id": "89c7ec6a-fb45-471a-91d2-890b96bd9cee",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "8|8yiFF5bnuYOUqRXZTxd6n2DFAlEBycD8eXq1JO5g32eb2f91",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://product_management.in/api/auth-check",
+          "protocol": "http",
+          "host": [
+            "product_management",
+            "in"
+          ],
+          "path": [
+            "api",
+            "auth-check"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-cart",
+      "id": "2d661380-3bad-48dd-8e01-9d16303fe534",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "11|2Tb8VlldyZbzaQuFyQrcReuoIlaphOTxUSqImK5S13ef7235",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://product_management.in/api/cart",
+          "protocol": "http",
+          "host": [
+            "product_management",
+            "in"
+          ],
+          "path": [
+            "api",
+            "cart"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-cart-quantity",
+      "id": "94a90e32-d703-46e2-8c5a-396308296556",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "11|2Tb8VlldyZbzaQuFyQrcReuoIlaphOTxUSqImK5S13ef7235",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"qty\": 5\r\n}\r\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://product_management.in/api/cart/items/18",
+          "protocol": "http",
+          "host": [
+            "product_management",
+            "in"
+          ],
+          "path": [
+            "api",
+            "cart",
+            "items",
+            "18"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Remove-item-from-cart",
+      "id": "297ffdfd-f500-4139-b592-d59dce1fe99e",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "11|2Tb8VlldyZbzaQuFyQrcReuoIlaphOTxUSqImK5S13ef7235",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://product_management.in/api/cart/items/18",
+          "protocol": "http",
+          "host": [
+            "product_management",
+            "in"
+          ],
+          "path": [
+            "api",
+            "cart",
+            "items",
+            "18"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "check-out",
+      "id": "44ae2d25-e4b8-4f64-8342-b2cb5f7a6769",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "11|2Tb8VlldyZbzaQuFyQrcReuoIlaphOTxUSqImK5S13ef7235",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://product_management.in/api/cart/checkout",
+          "protocol": "http",
+          "host": [
+            "product_management",
+            "in"
+          ],
+          "path": [
+            "api",
+            "cart",
+            "checkout"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
