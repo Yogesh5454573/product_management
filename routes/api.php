@@ -16,9 +16,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::delete('/cart/items/{product_id}', [CartController::class, 'destroy']);
     Route::post('/cart/checkout', [CartController::class, 'checkout']);
 });
-// Route::middleware('auth:sanctum')->get('/auth-check', function (Request $request) {
-//     return response()->json($request->user());
-// });
+
 Route::get('/test', function() {
     return response()->json(['message' => 'Laravel is reached!']);
 });

@@ -26,10 +26,9 @@ class CartController extends Controller
         ]);
     }
 
-    // POST /api/cart/items
     public function store(AddItemRequest $request)
     {
-        \Log::info($request->all()); // log all incoming data
+        \Log::info($request->all());
 
         $cart = $this->cart();
         $product = Product::where('is_active', 1)->findOrFail($request->product_id);
@@ -44,9 +43,6 @@ class CartController extends Controller
 
         return $this->success($item, 'Item added', 201);
     }
-
-
-    // GET /api/cart
     public function show()
     {
         $cart = Cart::with('items.product')
@@ -66,8 +62,6 @@ class CartController extends Controller
             'total' => $total
         ]);
     }
-
-    // PATCH /api/cart/items/{product_id}
     public function update(UpdateItemRequest $request, $product_id)
     {
         $item = $this->cart()->items()
@@ -78,8 +72,6 @@ class CartController extends Controller
 
         return $this->success($item, 'Quantity updated');
     }
-
-    // DELETE /api/cart/items/{product_id}
     public function destroy($product_id)
     {
         $this->cart()->items()
@@ -88,20 +80,15 @@ class CartController extends Controller
 
         return $this->success(null, 'Item removed');
     }
-
-    // POST /api/cart/checkout
     public function checkout()
     {
         $cart = Cart::with('items')->where('user_id', auth()->id())->first();
-
         if (!$cart || $cart->items->isEmpty()) {
             return $this->error('Cart is empty', 422);
         }
-
         DB::transaction(function () use ($cart) {
             $cart->items()->delete();
         });
-
         return $this->success(null, 'Checkout successful');
     }
 }
