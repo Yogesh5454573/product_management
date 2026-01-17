@@ -1,7 +1,7 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
         <div class="demo justify-content-center align-items-center">
-            <img style="width: 100px" class="img-fluid" src="{{ asset('backend/assets/img/download.png') }}"
+            <img style="width: 300px" class="img-fluid" src="{{ asset('backend/assets/img/product-management.webp') }}"
                 alt="{{ config('settings.APP_NAME') }}" />
         </div>
 
