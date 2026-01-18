@@ -6,7 +6,6 @@ use App\Models\Product;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
 use Yajra\DataTables\Facades\DataTables;
 use Illuminate\Support\Facades\Session;
 use App\Http\Requests\Admin\ProductRequest;
@@ -62,7 +61,6 @@ class ProductController extends Controller
     public function addUpdateProduct(ProductRequest $request, $token = false)
     {
         try {
-
             if ($request->method() == "PUT") {
                 $updateProduct = Product::where(['token' => $token])->first();
                 $post = $request->all();
@@ -79,7 +77,6 @@ class ProductController extends Controller
             info("Error in addUpdateProduct(): " . $e->getMessage());
             Session::flash("error", "There was some error, please try again later.");
         }
-
         return redirect()->route('admin.productList');
     }
 
@@ -111,11 +108,9 @@ class ProductController extends Controller
                 'token' => 'required|exists:products,token',
                 'is_active' => 'required|boolean'
             ]);
-
             $product = Product::where('token', $request->token)->firstOrFail();
             $product->is_active = $request->is_active;
             $product->save();
-
             return response()->json([
                 'status' => 'success',
                 'message' => 'Product status updated successfully!'

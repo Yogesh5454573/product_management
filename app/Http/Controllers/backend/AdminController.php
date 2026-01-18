@@ -17,19 +17,15 @@ class AdminController extends Controller
     {
         try {
             if ($request->ajax()) {
-
                 $adminList = Admin::query();
-
                 return Datatables::of($adminList)
                     ->addIndexColumn()
                     ->addColumn('action', function ($adminList) {
-
                         $edit = '<a href="/admin/editAdmin/' . $adminList->token . '"><button type="button" class="btn btn-sm btn-success">Edit</button></a>';
                         $delete = '<form method="POST" action="/admin/deleteAdmin/' . $adminList->token . '" accept-charset="UTF-8" class="delete" style="display:inline">
                     ' . csrf_field() . '
                     <input name="_method" value="DELETE" type="hidden">
                     <button type="button" class="btn btn-danger btn-sm admin_delete_alert">Delete</button></form>';
-
                         return $edit . ' ' . $delete;
                     })
                     ->rawColumns(['action'])
@@ -50,7 +46,6 @@ class AdminController extends Controller
     public function addUpdateAdmin(AdminRequest $request, $token = false)
     {
         try {
-
             if ($request->method() == "PUT") {
                 $updateAdmin = Admin::where(['token' => $token])->first();
                 $post = $request->all();
@@ -73,7 +68,6 @@ class AdminController extends Controller
             info("Error in addUpdateAdmin(): " . $e->getMessage());
             Session::flash("error", "There was some error, please try again later.");
         }
-
         return redirect()->route('admin.adminList');
     }
 
