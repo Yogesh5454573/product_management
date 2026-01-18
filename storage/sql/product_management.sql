@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 16, 2026 at 04:32 AM
+-- Generation Time: Jan 17, 2026 at 04:54 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -123,7 +123,16 @@ INSERT INTO `tbl_activity_log` (`id`, `log_name`, `description`, `subject_type`,
 (120, 'Product Log', 'updated', 'App\\Models\\Product', 'updated', 18, 'App\\Models\\Admin', 1, NULL, '{\"attributes\":{\"is_active\":1},\"old\":{\"is_active\":0}}', NULL, '2026-01-15 21:45:53', '2026-01-15 21:45:53'),
 (121, 'Product Log', 'updated', 'App\\Models\\Product', 'updated', 16, 'App\\Models\\Admin', 1, NULL, '{\"attributes\":{\"is_active\":0},\"old\":{\"is_active\":1}}', NULL, '2026-01-15 21:48:37', '2026-01-15 21:48:37'),
 (122, 'Product Log', 'updated', 'App\\Models\\Product', 'updated', 16, 'App\\Models\\Admin', 1, NULL, '{\"attributes\":{\"is_active\":1},\"old\":{\"is_active\":0}}', NULL, '2026-01-15 21:50:38', '2026-01-15 21:50:38'),
-(123, 'login', 'Login', 'App\\Models\\Admin', 'login', 1, 'App\\Models\\Admin', 1, '127.0.0.1', '{\"id\":1,\"name\":\"Super Admin\",\"ip_address\":\"127.0.0.1\",\"user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"}', NULL, '2026-01-15 21:51:49', '2026-01-15 21:51:49');
+(123, 'login', 'Login', 'App\\Models\\Admin', 'login', 1, 'App\\Models\\Admin', 1, '127.0.0.1', '{\"id\":1,\"name\":\"Super Admin\",\"ip_address\":\"127.0.0.1\",\"user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"}', NULL, '2026-01-15 21:51:49', '2026-01-15 21:51:49'),
+(124, 'login', 'Login', 'App\\Models\\Admin', 'login', 1, 'App\\Models\\Admin', 1, '127.0.0.1', '{\"id\":1,\"name\":\"Super Admin\",\"ip_address\":\"127.0.0.1\",\"user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"}', NULL, '2026-01-16 21:24:38', '2026-01-16 21:24:38'),
+(125, 'logout', 'Logout', 'App\\Models\\Admin', 'logout', 1, 'App\\Models\\Admin', 1, '127.0.0.1', '{\"id\":1,\"name\":\"Super Admin\",\"ip_address\":\"127.0.0.1\",\"user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"}', NULL, '2026-01-16 21:25:24', '2026-01-16 21:25:24'),
+(126, 'login', 'Login', 'App\\Models\\Admin', 'login', 1, 'App\\Models\\Admin', 1, '127.0.0.1', '{\"id\":1,\"name\":\"Super Admin\",\"ip_address\":\"127.0.0.1\",\"user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"}', NULL, '2026-01-16 21:28:54', '2026-01-16 21:28:54'),
+(127, 'logout', 'Logout', 'App\\Models\\Admin', 'logout', 1, 'App\\Models\\Admin', 1, '127.0.0.1', '{\"id\":1,\"name\":\"Super Admin\",\"ip_address\":\"127.0.0.1\",\"user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"}', NULL, '2026-01-16 21:36:52', '2026-01-16 21:36:52'),
+(128, 'login', 'Login', 'App\\Models\\Admin', 'login', 1, 'App\\Models\\Admin', 1, '127.0.0.1', '{\"id\":1,\"name\":\"Super Admin\",\"ip_address\":\"127.0.0.1\",\"user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"}', NULL, '2026-01-16 21:40:51', '2026-01-16 21:40:51'),
+(129, 'logout', 'Logout', 'App\\Models\\Admin', 'logout', 1, 'App\\Models\\Admin', 1, '127.0.0.1', '{\"id\":1,\"name\":\"Super Admin\",\"ip_address\":\"127.0.0.1\",\"user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"}', NULL, '2026-01-16 21:42:59', '2026-01-16 21:42:59'),
+(130, 'login', 'Login', 'App\\Models\\Admin', 'login', 1, 'App\\Models\\Admin', 1, '127.0.0.1', '{\"id\":1,\"name\":\"Super Admin\",\"ip_address\":\"127.0.0.1\",\"user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"}', NULL, '2026-01-16 21:44:06', '2026-01-16 21:44:06'),
+(131, 'logout', 'Logout', 'App\\Models\\Admin', 'logout', 1, 'App\\Models\\Admin', 1, '127.0.0.1', '{\"id\":1,\"name\":\"Super Admin\",\"ip_address\":\"127.0.0.1\",\"user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"}', NULL, '2026-01-16 21:45:47', '2026-01-16 21:45:47'),
+(132, 'login', 'Login', 'App\\Models\\Admin', 'login', 1, 'App\\Models\\Admin', 1, '127.0.0.1', '{\"id\":1,\"name\":\"Super Admin\",\"ip_address\":\"127.0.0.1\",\"user_agent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/143.0.0.0 Safari\\/537.36\"}', NULL, '2026-01-16 21:46:04', '2026-01-16 21:46:04');
 
 -- --------------------------------------------------------
 
@@ -159,6 +168,42 @@ INSERT INTO `tbl_admin` (`id`, `token`, `status`, `admin_type`, `name`, `email`,
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_carts`
+--
+
+CREATE TABLE `tbl_carts` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tbl_carts`
+--
+
+INSERT INTO `tbl_carts` (`id`, `user_id`, `created_at`, `updated_at`) VALUES
+(1, 2, '2026-01-16 21:04:47', '2026-01-16 21:04:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_cart_items`
+--
+
+CREATE TABLE `tbl_cart_items` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `cart_id` bigint(20) UNSIGNED NOT NULL,
+  `product_id` bigint(20) UNSIGNED NOT NULL,
+  `qty` int(10) UNSIGNED NOT NULL,
+  `price_at_time` decimal(10,2) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_migrations`
 --
 
@@ -173,7 +218,50 @@ CREATE TABLE `tbl_migrations` (
 --
 
 INSERT INTO `tbl_migrations` (`id`, `migration`, `batch`) VALUES
-(2, '2026_01_15_171631_create_products_table', 1);
+(2, '2026_01_15_171631_create_products_table', 1),
+(3, '2026_01_16_155639_create_personal_access_tokens_table', 2),
+(4, '2026_01_16_155901_create_users_table', 3),
+(5, '2026_01_16_161021_create_carts_table', 4),
+(6, '2026_01_16_161313_create_cart_items_table', 5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_personal_access_tokens`
+--
+
+CREATE TABLE `tbl_personal_access_tokens` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `tokenable_type` varchar(255) NOT NULL,
+  `tokenable_id` bigint(20) UNSIGNED NOT NULL,
+  `name` text NOT NULL,
+  `token` varchar(64) NOT NULL,
+  `abilities` text DEFAULT NULL,
+  `last_used_at` timestamp NULL DEFAULT NULL,
+  `expires_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tbl_personal_access_tokens`
+--
+
+INSERT INTO `tbl_personal_access_tokens` (`id`, `tokenable_type`, `tokenable_id`, `name`, `token`, `abilities`, `last_used_at`, `expires_at`, `created_at`, `updated_at`) VALUES
+(1, 'App\\Models\\User', 2, 'customer-token', 'bcf516bf717e7fcea33e5de19ee90e6250851cbf81bfcfec49c0190cf5f2664d', '[\"*\"]', NULL, NULL, '2026-01-16 11:30:30', '2026-01-16 11:30:30'),
+(2, 'App\\Models\\User', 3, 'customer-token', '79b084cc8654283617faa3f26fdbd58e2e45cd0e0e43a614b1558d0830a3bdd7', '[\"*\"]', NULL, NULL, '2026-01-16 11:38:08', '2026-01-16 11:38:08'),
+(3, 'App\\Models\\User', 2, 'customer-token', '0e43d339700f57bb772ccfbbe1b8bf01e50802fdf3752f443962cc35a0e87c7b', '[\"*\"]', NULL, NULL, '2026-01-16 11:39:21', '2026-01-16 11:39:21'),
+(4, 'App\\Models\\User', 2, 'customer-token', '55cea841dcc5ce161ca0e04de558cf141a7d6dd84e01b9e57c7b09aebd00379d', '[\"*\"]', '2026-01-16 11:54:41', NULL, '2026-01-16 11:43:07', '2026-01-16 11:54:41'),
+(5, 'App\\Models\\User', 2, 'customer-token', '18618986ebc83ead3ecb9e8d255f4eb31336adff4f5fc9b25a75b6e118fbf724', '[\"*\"]', '2026-01-16 12:00:37', NULL, '2026-01-16 11:57:15', '2026-01-16 12:00:37'),
+(6, 'App\\Models\\User', 2, 'customer-token', '5935a3d24354aa05705b65428cc0f0870dc90ae5243fc3c0bb3c8c04b03dac47', '[\"*\"]', '2026-01-16 12:02:22', NULL, '2026-01-16 12:01:50', '2026-01-16 12:02:22'),
+(7, 'App\\Models\\User', 2, 'customer-token', 'a8a52b5fbc3847db09adbeb838c35e93cccfe4c44a0ba9c905792f5ad81a7a05', '[\"*\"]', '2026-01-16 20:20:51', NULL, '2026-01-16 20:20:03', '2026-01-16 20:20:51'),
+(8, 'App\\Models\\User', 2, 'customer-token', '67603de0d447b3c4e2f2942a7058c2d442a34dcd715f73e0fc91277f6e60fabc', '[\"*\"]', '2026-01-16 20:38:36', NULL, '2026-01-16 20:32:44', '2026-01-16 20:38:36'),
+(9, 'App\\Models\\User', 2, 'customer-token', '81eb1a29e3136792205c1a83eb0879b133bccd34c2f7726a0f8b9c57ed278170', '[\"*\"]', '2026-01-16 20:41:23', NULL, '2026-01-16 20:38:46', '2026-01-16 20:41:23'),
+(10, 'App\\Models\\User', 2, 'customer-token', '34a05f4b33bbfae5d29ee6b05080a7af0aef29dacf98729aa92e405cafd4ffdc', '[\"*\"]', '2026-01-16 20:49:58', NULL, '2026-01-16 20:43:03', '2026-01-16 20:49:58'),
+(11, 'App\\Models\\User', 2, 'customer-token', '3aec132e0fd7092018aee75a41d89d7982f87ae32bdb200ef713ee62aca09368', '[\"*\"]', '2026-01-16 22:15:37', NULL, '2026-01-16 20:56:38', '2026-01-16 22:15:37'),
+(12, 'App\\Models\\User', 4, 'customer-token', 'b8539cbdeae312e84f4445d34740b7d8533e8f4d38d03f890bc3ddf25834422a', '[\"*\"]', NULL, NULL, '2026-01-16 21:56:50', '2026-01-16 21:56:50'),
+(13, 'App\\Models\\User', 5, 'customer-token', 'f6f85b07d873a8f1d4669fc0afa85408b8fdf31cfbc445137a1f28d529716284', '[\"*\"]', NULL, NULL, '2026-01-16 22:20:48', '2026-01-16 22:20:48'),
+(14, 'App\\Models\\User', 2, 'customer-token', '18ad5c72c434655e81f30fe9498be10fece1db75660f2692f67f4ab6e2483244', '[\"*\"]', NULL, NULL, '2026-01-16 22:20:55', '2026-01-16 22:20:55');
 
 -- --------------------------------------------------------
 
@@ -214,6 +302,33 @@ INSERT INTO `tbl_products` (`id`, `token`, `name`, `sku`, `price`, `stock`, `is_
 (29, '747FC4E1-370D-439F-9AEF-CA304815967C', 'Product 14', 'SKU-GFBZ714', 237.00, 73, 1, '2026-01-15 12:27:01', '2026-01-15 12:27:01'),
 (30, '4D02EA04-D8CB-4540-A24E-088812C5C019', 'Product 15', 'SKU-M5CRC15', 71.00, 80, 1, '2026-01-15 12:27:01', '2026-01-15 12:27:01');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_users`
+--
+
+CREATE TABLE `tbl_users` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `remember_token` varchar(100) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `tbl_users`
+--
+
+INSERT INTO `tbl_users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'Admin', 'admin@example.com', '$2y$12$XFlPI4bD/vMnwrajfQhRJeSugYXMkXJgDo8rdYGOPZPzTQrjGwOr6', NULL, '2026-01-16 10:46:01', '2026-01-16 10:46:01'),
+(2, 'John Doe', 'john@test.com', '$2y$12$wecpfK7u6zqGe7Zil6CI1eoi0ivUdrtVRczAXVazupazAJkKQptoO', NULL, '2026-01-16 11:30:30', '2026-01-16 11:30:30'),
+(3, 'John Doe', 'john3@test.com', '$2y$12$b302WN5N4Mup2i1y6OElqujGm9uEu/W95S9ImNDca9.6BBtF2b.2u', NULL, '2026-01-16 11:38:08', '2026-01-16 11:38:08'),
+(4, 'John Doe', 'johnr@test.com', '$2y$12$J5JIvAyQbi/CX0Q7GzPaoOEy4nOg.FkEjDAFvoZWbEd6tuGJef9ee', NULL, '2026-01-16 21:56:50', '2026-01-16 21:56:50'),
+(5, 'John Doe', 'john9@test.com', '$2y$12$YPX9ozKQRC2ZkTxbxvt1qOh355AczN8msvsAvaghIpEzXGo4XqpD.', NULL, '2026-01-16 22:20:48', '2026-01-16 22:20:48');
+
 --
 -- Indexes for dumped tables
 --
@@ -231,10 +346,34 @@ ALTER TABLE `tbl_admin`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_carts`
+--
+ALTER TABLE `tbl_carts`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `tbl_carts_user_id_unique` (`user_id`);
+
+--
+-- Indexes for table `tbl_cart_items`
+--
+ALTER TABLE `tbl_cart_items`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `tbl_cart_items_cart_id_product_id_unique` (`cart_id`,`product_id`),
+  ADD KEY `tbl_cart_items_product_id_foreign` (`product_id`);
+
+--
 -- Indexes for table `tbl_migrations`
 --
 ALTER TABLE `tbl_migrations`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `tbl_personal_access_tokens`
+--
+ALTER TABLE `tbl_personal_access_tokens`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `tbl_personal_access_tokens_token_unique` (`token`),
+  ADD KEY `tbl_personal_access_tokens_tokenable_type_tokenable_id_index` (`tokenable_type`,`tokenable_id`),
+  ADD KEY `tbl_personal_access_tokens_expires_at_index` (`expires_at`);
 
 --
 -- Indexes for table `tbl_products`
@@ -244,6 +383,13 @@ ALTER TABLE `tbl_products`
   ADD UNIQUE KEY `tbl_tbl_products_sku_unique` (`sku`);
 
 --
+-- Indexes for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `tbl_users_email_unique` (`email`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -251,7 +397,7 @@ ALTER TABLE `tbl_products`
 -- AUTO_INCREMENT for table `tbl_activity_log`
 --
 ALTER TABLE `tbl_activity_log`
-  MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=124;
+  MODIFY `id` int(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
 
 --
 -- AUTO_INCREMENT for table `tbl_admin`
@@ -260,16 +406,57 @@ ALTER TABLE `tbl_admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT for table `tbl_carts`
+--
+ALTER TABLE `tbl_carts`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `tbl_cart_items`
+--
+ALTER TABLE `tbl_cart_items`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `tbl_migrations`
 --
 ALTER TABLE `tbl_migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `tbl_personal_access_tokens`
+--
+ALTER TABLE `tbl_personal_access_tokens`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+
+--
+-- AUTO_INCREMENT for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tbl_carts`
+--
+ALTER TABLE `tbl_carts`
+  ADD CONSTRAINT `tbl_carts_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `tbl_users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `tbl_cart_items`
+--
+ALTER TABLE `tbl_cart_items`
+  ADD CONSTRAINT `tbl_cart_items_cart_id_foreign` FOREIGN KEY (`cart_id`) REFERENCES `tbl_carts` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `tbl_cart_items_product_id_foreign` FOREIGN KEY (`product_id`) REFERENCES `tbl_products` (`id`) ON DELETE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
