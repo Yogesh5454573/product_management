@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'PonumLodge'),
+    'name' => env('APP_NAME', 'ProductManagement'),
 
     /*
     |--------------------------------------------------------------------------
