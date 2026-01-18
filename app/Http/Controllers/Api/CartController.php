@@ -8,7 +8,9 @@ use App\Http\Requests\Api\UpdateItemRequest;
 use App\Models\Cart;
 use App\Models\Product;
 use App\Traits\ApiResponse;
+use Exception;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class CartController extends Controller
 {
@@ -21,74 +23,71 @@ class CartController extends Controller
 
     private function cart()
     {
-        return Cart::firstOrCreate([
-            'user_id' => auth()->id()
-        ]);
+        return Cart::firstOrCreate(['user_id' => auth()->id()]);
     }
 
     public function store(AddItemRequest $request)
     {
-        \Log::info($request->all());
-
-        $cart = $this->cart();
-        $product = Product::where('is_active', 1)->findOrFail($request->product_id);
-
-        $item = $cart->items()->updateOrCreate(
-            ['product_id' => $product->id],
-            [
-                'qty' => DB::raw('qty + ' . $request->qty),
-                'price_at_time' => $product->price
-            ]
-        );
-
-        return $this->success($item, 'Item added', 201);
+        try {
+            Log::info($request->all());
+            $cart = $this->cart();
+            $product = Product::where('is_active', 1)->findOrFail($request->product_id);
+            $item = $cart->items()->updateOrCreate(['product_id' => $product->id], ['qty' => DB::raw('qty + ' . $request->qty), 'price_at_time' => $product->price]);
+            return $this->success($item, 'Item added', 201);
+        } catch (Exception $e) {
+            return $this->error($e->getMessage());
+        }
     }
+
     public function show()
     {
-        $cart = Cart::with('items.product')
-            ->where('user_id', auth()->id())
-            ->first();
-
-        if (!$cart) {
-            return $this->success(['items' => [], 'total' => 0]);
+        try {
+            $cart = Cart::with('items.product')->where('user_id', auth()->id())->first();
+            if (!$cart) {
+                return $this->success(['items' => [], 'total' => 0]);
+            }
+            $total = $cart->items->sum(fn($i) => $i->qty * $i->price_at_time);
+            return $this->success(['items' => $cart->items, 'total' => $total]);
+        } catch (Exception $e) {
+            return $this->error($e->getMessage());
         }
-
-        $total = $cart->items->sum(
-            fn($i) => $i->qty * $i->price_at_time
-        );
-
-        return $this->success([
-            'items' => $cart->items,
-            'total' => $total
-        ]);
     }
+
     public function update(UpdateItemRequest $request, $product_id)
     {
-        $item = $this->cart()->items()
-            ->where('product_id', $product_id)
-            ->firstOrFail();
-
-        $item->update(['qty' => $request->qty]);
-
-        return $this->success($item, 'Quantity updated');
+        try {
+            $item = $this->cart()->items()->where('product_id', $product_id)->firstOrFail();
+            $item->update(['qty' => $request->qty]);
+            return $this->success($item, 'Quantity updated');
+        } catch (Exception $e) {
+            return $this->error($e->getMessage());
+        }
     }
+
     public function destroy($product_id)
     {
-        $this->cart()->items()
-            ->where('product_id', $product_id)
-            ->delete();
-
-        return $this->success(null, 'Item removed');
+        try {
+            $this->cart()->items()->where('product_id', $product_id)->delete();
+            return $this->success(null, 'Item removed');
+        } catch (Exception $e) {
+            return $this->error($e->getMessage());
+        }
     }
+
     public function checkout()
     {
-        $cart = Cart::with('items')->where('user_id', auth()->id())->first();
-        if (!$cart || $cart->items->isEmpty()) {
-            return $this->error('Cart is empty', 422);
+        try {
+            $cart = Cart::with('items')->where('user_id', auth()->id())->first();
+            if (!$cart || $cart->items->isEmpty()) {
+                return $this->error('Cart is empty', 422);
+            }
+            DB::transaction(function () use ($cart) {
+                $cart->items()->delete();
+            });
+            return $this->success(null, 'Checkout successful');
+
+        } catch (Exception $e) {
+            return $this->error($e->getMessage());
         }
-        DB::transaction(function () use ($cart) {
-            $cart->items()->delete();
-        });
-        return $this->success(null, 'Checkout successful');
     }
 }
