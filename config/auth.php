@@ -46,7 +46,7 @@ return [
         ],
         'admin' => [
             'driver' => 'session',
-            'provider' => 'admin', // Custom provider for admins
+            'provider' => 'admin',
         ],
     ],
 
