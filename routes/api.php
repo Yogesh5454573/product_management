@@ -22,7 +22,7 @@ Route::middleware('auth:sanctum')->group(function () {
 // ========== End Middleware =========
 
 // ========== Testing API =========
-Route::get('/test', function() {
+Route::get('/test', function () {
     return response()->json(['message' => 'Laravel is reached!']);
 });
 // ========== Testing API =========
