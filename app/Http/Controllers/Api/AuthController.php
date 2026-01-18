@@ -7,7 +7,6 @@ use App\Traits\ApiResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Http\Requests\Api\{RegisterRequest, LoginRequest};
-
 use App\Models\User;
 
 class AuthController extends Controller
