@@ -21,7 +21,6 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
         // ========== End Dashboard ===========
 
-
         // ========= Start Manage Admins  =========
         Route::controller(AdminController::class)
             ->name('admin.')
